@@ -1,0 +1,707 @@
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid{
+    margin: 0px auto;
+    max-width: 1100px;
+}
+
+/* HEADER */
+#wrapper {
+    
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    
+}
+
+.sticky {
+    background-color: #fff;
+    opacity: 0.8;
+    box-shadow: 5px 5px 15px #888888;
+    animation: showSticky ease 1s;
+}
+
+
+
+@keyframes showSticky {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+.sticky .category li a,
+.sticky .search-header a i{
+    color: #000;
+}
+
+
+.body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.body-header .logo-header img {
+    width: 130px;
+}
+
+ul.category {
+    display: flex;
+}
+
+ul.category li a{
+    position: relative;
+    padding: 20px 15px;
+    color: #fff;
+}
+.search-header a i{
+    color: #fff;
+}
+
+.search-header a{
+    color: #838383;
+    padding: 7px;
+}
+
+.search-header a i:hover{
+    color: #000;
+}
+
+ul.category li a::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background: red;
+    bottom: 0px;
+    left: 0px;
+}
+
+ul.category li a:hover {
+    color: #000;
+}
+
+ ul.category li a:hover::after {
+ 
+   width: 100%;
+   transition: all 0.5s ease-in-out;
+} 
+
+.tour-inside {
+    position: relative;
+}
+
+li.tour-inside .inside {
+    position: absolute;
+    border: 5px solid #838383;
+    border-color:#838383 transparent transparent transparent;
+    right: 4px;
+    top: 6px;
+}
+
+
+
+.category-hot {
+    position: relative;
+}
+
+.category-hot .outside {
+    position: absolute;
+    border: 5px solid #838383;
+    border-color:#838383 transparent  transparent transparent;
+    right: 4px;
+    top: 6px;
+}
+
+
+.category-hot .hot {
+    position: absolute;
+    right: -6px;
+    top: -9px;
+    background-color: #ffb300;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+/* SLIDER */
+.slider {
+    
+    
+}
+
+.image-slider .body-image-slider  .slick-slide img{
+    width: 100%;
+    height: 800px;
+    object-fit: center;
+}
+
+.image-slider .body-image-slider .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -45px);
+    justify-content: center;
+    align-items: center;
+    gap: 0 15px;
+}
+
+.image-slider .body-image-slider .slick-dots button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    border: 3px solid #827b71;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.image-slider .body-image-slider li.slick-active button{
+    border: none;
+    background-color: #fff;
+}
+
+
+/* CONTENT */
+
+.body-content1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.body-content1 p{
+    opacity: 0.5;
+}
+
+.body-content1 h1{
+    position: relative;
+    padding-top: 20px;
+}
+
+.body-content1 h1::before {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #ffb300;
+    width: 60px;
+    top: 69px;
+    left: 47%;
+}
+
+.body-content1 h1::after {
+    position: absolute;
+    content: "";
+    border: 5px solid #ffb300;
+    border-color:transparent transparent #ffb300 transparent;
+    top: 59px;
+    left: 49.3%;
+}
+
+.image-address-traval {
+    padding-top: 70px;
+}
+
+.image-address-traval .body-image-address-travel img {
+    height: 200px;
+    border-radius: 100px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.image-address-traval .body-image-address-travel li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-address-traval .body-image-address-travel li .name-address-img {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+
+
+.image-address-traval .body-image-address-travel img:hover{
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out; 
+}
+
+.image-address-traval .body-image-address-travel button.slick-prev{
+    position: absolute;
+    top: 40%;
+    left: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+    
+}
+
+.image-address-traval .body-image-address-travel button.slick-next{
+    position: absolute;
+    top: 40%;
+    right: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+}
+
+.image-address-traval .body-image-address-travel button.slick-prev i,
+.image-address-traval .body-image-address-travel button.slick-next i{
+    font-size: 30px;
+}
+
+.image-address-traval .body-image-address-travel button.slick-prev i:hover,
+.image-address-traval .body-image-address-travel button.slick-next i:hover {
+    color: #ffb300;
+}
+
+
+
+.body-content2 {
+    margin-top: 100px;
+    
+}
+
+.body-content2{
+    width: 100%;
+    height: 750px;
+    background-image: linear-gradient(0,rgba(0,0,0, 0.5 ), rgba(0,0,0,0.5)), url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/testimonial.jpg);
+  
+}
+
+.body-content2 {
+    color: #fff;
+}
+
+.img-address-tour-outside  {
+    margin-top: 100px;
+}
+
+.img-address-tour-outside .body-image-address-tour-outside img  {
+    height: 300px;
+    
+} 
+
+
+.img-address-tour-outside .body-image-address-tour-outside button.slick-prev{
+    position: absolute;
+    top: 45%;
+    left: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+    
+}
+
+.img-address-tour-outside .body-image-address-tour-outside button.slick-next{
+    position: absolute;
+    top: 45%;
+    right: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+}
+
+.img-address-tour-outside .body-image-address-tour-outside button.slick-prev i,
+.img-address-tour-outside .body-image-address-tour-outside button.slick-next i{
+    font-size: 30px;
+    color: #fff;
+}
+
+.img-address-tour-outside .body-image-address-tour-outside button.slick-prev i:hover,
+.img-address-tour-outside .body-image-address-tour-outside button.slick-next i:hover{
+    color: #ffb300;
+}
+
+.body-content2 .img-address-tour-outside .body-image-address-tour-outside li a img{
+   width: 100%;
+   display: block;
+   transition: all 0.3s ease-in-out;
+}
+
+.body-content2 .img-address-tour-outside .body-image-address-tour-outside li{
+    display: block;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.body-content2 .img-address-tour-outside .body-image-address-tour-outside li:hover img {
+    transform: scale(1.1);
+}
+
+.body-content3 {
+    
+}
+
+.endows {
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.endow  {
+    margin: 0 50px;
+}
+
+.endow img {
+    width: 100px;
+}
+
+.endow h2 {
+    margin: 15px 0;
+}
+
+.endow p {
+    opacity: 0.4;
+}
+
+.body-content4{
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+    background-image: linear-gradient(0,rgba(0,0,0, 0.5 ), rgba(0,0,0,0.5)), url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2019/01/plane.jpg);
+    background-size: cover;
+    
+}
+
+.body-content4 p,
+.body-content4 h1 {
+    color: #fff;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.result img {
+    width: 100px;
+}
+
+.result h1 {
+    color: #ffb300;
+    margin: 30px 0;
+}
+
+.result p {
+    opacity: 0.8;
+}
+
+
+.img-address-tour-inside{
+    margin-top: 100px;
+}
+
+.img-address-tour-inside .body-image-address-tour-inside img  {
+    height: 300px;
+    cursor: pointer;
+} 
+
+
+.img-address-tour-inside .body-image-address-tour-inside button.slick-prev{
+    position: absolute;
+    top: 45%;
+    left: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+    
+}
+
+.img-address-tour-inside .body-image-address-tour-inside button.slick-next{
+    position: absolute;
+    top: 45%;
+    right: -30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-color: Transparent;
+    z-index: 1;
+}
+
+.img-address-tour-inside .body-image-address-tour-inside button.slick-prev i,
+.img-address-tour-inside .body-image-address-tour-inside button.slick-next i{
+    font-size: 30px;
+    color: #000;
+}
+
+.img-address-tour-inside .body-image-address-tour-inside button.slick-prev i:hover,
+.img-address-tour-inside .body-image-address-tour-inside button.slick-next i:hover{
+    color: #ffb300;
+}
+
+.img-address-tour-inside .body-image-address-tour-inside li a img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.img-address-tour-inside .body-image-address-tour-inside li {
+    display: block;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.img-address-tour-inside .body-image-address-tour-inside li a img:hover{
+    transform: scale(1.1);
+}
+
+.body-content6 {
+    width: 100%;
+    height: 630px;
+    
+
+}
+
+.backgroud-content6 {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    background-image: linear-gradient(0,rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/12/1600x1200-9.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.backgroud-content6 h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.backgroud-content6 h2 {
+    display: inline;
+    background: #ffb300;
+}
+
+.body-content6 .body-content1 h1::before {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #ffb300;
+    width: 60px;
+    top: 150px;
+    left: 47%;
+}
+
+.body-content6 .body-content1 h1::after {
+    position: absolute;
+    content: "";
+    border: 5px solid #ffb300;
+    border-color:transparent transparent #ffb300 transparent;
+    top: 141px;
+    left: 49.3%;
+}
+
+.time {
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.time-remaining {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px
+}
+
+.time-remaining div {
+    background-color: #ffb300;
+    padding: 50px 90px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-buy-ticky {
+    text-align: center;
+    margin-top: 70px;
+}
+.btn-buy-ticky button {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color:#ffb300;
+    border: none;
+    border-radius: 2px; 
+}
+
+.btn-buy-ticky button:hover {
+    color: #fff;
+}
+
+ .body-content7 {
+
+ }
+ .body-content7 .body-content1 h1::after {
+    position: absolute;
+    content: "";
+    border: 5px solid #ffb300;
+    border-color:transparent transparent #ffb300 transparent;
+    top: 60px;
+    left: 48.7%;
+}
+
+
+.news {
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.new {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.new h3 {
+    margin: 10px 0;
+}
+
+.new h6 {
+    margin-bottom: 10px;
+}
+
+.new:hover img{
+    opacity: 0.7;
+}
+
+.new:hover h6,
+.new:hover p{
+    color: #ffb300;
+}
+
+
+/* FOOTER */
+#footer{
+    width: 100%;
+    height: 410px;
+    background-image: url(http://mauweb.monamedia.net/travelwp/wp-content/uploads/2018/02/bg-section-videos.jpg);
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.body-footer {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #a5a5a5;
+    position: relative;
+}
+
+.content-footer {
+    margin-top: 60px;
+    color: #a5a5a5;
+}
+
+.content-footer ul {
+    margin-top: 50px;
+}
+
+.content-footer ul li {
+    display: flex;
+    margin: 20px 0;
+}
+
+.content-footer ul li i{
+    margin-right: 10px;
+}
+
+.social {
+    margin-top: 40px;
+    
+}
+.social i{
+    margin: 0 7px;
+    font-size: 20px;
+    color: #a5a5a5;
+}
+
+.social i:hover {
+    color: #ffb300;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    bottom: -50px;
+}
+
+
+/* Back top */
+.back-top {
+    position: fixed;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #a5a5a5; 
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    color: #a5a5a5;
+    transition: all 0.5s ease-in-out;
+}
+
+.back-top:hover {
+    background-color: #ffb300;
+    border: none;
+    color: #000;
+}
